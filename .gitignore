@@ -1,0 +1,20 @@
+# Large files - exclude from git
+data/fakeddit/train.csv
+fnd(1).pdf
+features_sample.pt
+*.pt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
