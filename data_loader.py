@@ -40,8 +40,13 @@ class FakedditDataset(Dataset):
         else:
             text = row['title']
         
-        # Label: Using 2_way_label (fake=1, real=0)
-        label = int(row['2_way_label']) if '2_way_label' in row else -1
+        # Label: Using 'label' column (if present) else fallback to 2_way_label
+        if 'label' in row and not pd.isna(row['label']):
+            label = int(row['label'])
+        elif '2_way_label' in row and not pd.isna(row['2_way_label']):
+            label = int(row['2_way_label'])
+        else:
+            label = -1
         
         # Image
         image = None

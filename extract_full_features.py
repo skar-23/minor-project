@@ -15,9 +15,9 @@ print("FULL FEATURE EXTRACTION - ALL 99 SAMPLES")
 print("="*80)
 
 # Load data
-csv_path = './outputs/preprocessed_data.csv'
+csv_path = './data/fakeddit/train_100.csv'
 if not os.path.exists(csv_path):
-    print(f"ERROR: {csv_path} not found!")
+    print(f"ERROR: {csv_path} not found! Run preprocess.py first.")
     exit(1)
 
 print(f"\n✓ Loading: {csv_path}")
